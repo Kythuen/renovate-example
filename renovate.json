@@ -2,16 +2,19 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "labels": ["dependencies"],
   "dependencyDashboard": true,
+  "automerge": true,
+  "automergeSchedule":  ["before 0am"],
   "separateMinorPatch": true,
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
-      "automerge": true
+      "automerge": true,
+      "automergeSchedule": ["before 0am"]
     },
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true,
-      "schedule": [ "before 11pm" ]
+      "automergeSchedule": ["before 0am"]
     }
   ]
 }
