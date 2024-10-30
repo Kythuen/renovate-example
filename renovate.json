@@ -10,7 +10,8 @@
     },
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true
+      "automerge": true,
+      "schedule": ["30 * * * *"]
     }
   ]
 }
