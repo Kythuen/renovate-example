@@ -13,8 +13,8 @@ importers:
         version: 3.5.12(typescript@5.0.2)
     devDependencies:
       '@commitlint/cli':
-        specifier: 17.4.4
-        version: 17.4.4
+        specifier: 17.8.1
+        version: 17.8.1
       '@commitlint/config-conventional':
         specifier: 17.4.4
         version: 17.4.4
@@ -96,8 +96,8 @@ packages:
     resolution: {integrity: sha512-Z/yiTPj+lDVnF7lWeKCIJzaIkI0vYO87dMpZ4bg4TDrFe4XXLFWL1TbXU27gBP3QccxV9mZICCrnjnYlJjXHOA==}
     engines: {node: '>=6.9.0'}
 
-  '@commitlint/cli@17.4.4':
-    resolution: {integrity: sha512-HwKlD7CPVMVGTAeFZylVNy14Vm5POVY0WxPkZr7EXLC/os0LH/obs6z4HRvJtH/nHCMYBvUBQhGwnufKfTjd5g==}
+  '@commitlint/cli@17.8.1':
+    resolution: {integrity: sha512-ay+WbzQesE0Rv4EQKfNbSMiJJ12KdKTDzIt0tcK4k11FdsWmtwP0Kp1NWMOUswfIWo6Eb7p7Ln721Nx9FLNBjg==}
     engines: {node: '>=v14'}
     hasBin: true
 
@@ -1168,6 +1168,7 @@ packages:
   eslint@8.35.0:
     resolution: {integrity: sha512-BxAf1fVL7w+JLRQhWl2pzGeSiGqbWumV4WNvc9Rhp6tiCtm4oHnyPBSEtMGZwrQgudFQ+otqzWoPB7x+hxoWsw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@9.6.1:
@@ -2515,7 +2516,7 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@commitlint/cli@17.4.4':
+  '@commitlint/cli@17.8.1':
     dependencies:
       '@commitlint/format': 17.8.1
       '@commitlint/lint': 17.8.1
