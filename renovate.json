@@ -6,19 +6,6 @@
   "automerge": true,
   "platformAutomerge": true,
   "separateMinorPatch": true,
-  "automergeType": "pr",
-  "minor": {
-    "automerge": true
-  },
-  "patch": {
-    "automerge": true
-  },
-  "pin": {
-    "automerge": true
-  },
-  "digest": {
-    "automerge": true
-  },
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
