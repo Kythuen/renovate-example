@@ -20,6 +20,12 @@
       "automerge": true,
       "separateMinorPatch": false,
       "automergeType": "branch"
+    },
+    {
+      "matchPackageNames": ["lint-staged"],
+      "automerge": true,
+      "separateMinorPatch": false,
+      "automergeType": "branch"
     }
   ]
 }
