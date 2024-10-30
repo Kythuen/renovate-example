@@ -31,8 +31,8 @@ importers:
         specifier: ^5.1.4
         version: 5.1.4(vite@5.4.10(@types/node@20.4.5))(vue@3.5.12(typescript@5.0.2))
       commitizen:
-        specifier: 4.3.0
-        version: 4.3.0(@types/node@20.4.5)(typescript@5.0.2)
+        specifier: 4.3.1
+        version: 4.3.1(@types/node@20.4.5)(typescript@5.0.2)
       cz-conventional-changelog:
         specifier: 3.3.0
         version: 3.3.0(@types/node@20.4.5)(typescript@5.0.2)
@@ -843,8 +843,8 @@ packages:
     resolution: {integrity: sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ==}
     engines: {node: ^12.20.0 || >=14}
 
-  commitizen@4.3.0:
-    resolution: {integrity: sha512-H0iNtClNEhT0fotHvGV3E9tDejDeS04sN1veIebsKYGMuGscFaswRoYJKmT3eW85eIJAs0F28bG2+a/9wCOfPw==}
+  commitizen@4.3.1:
+    resolution: {integrity: sha512-gwAPAVTy/j5YcOOebcCRIijn+mSjWJC+IYKivTu6aG8Ei/scoXgfsMRnuAk6b0GRste2J4NGxVdMN3ZpfNaVaw==}
     engines: {node: '>= 12'}
     hasBin: true
 
@@ -1168,6 +1168,7 @@ packages:
   eslint@8.35.0:
     resolution: {integrity: sha512-BxAf1fVL7w+JLRQhWl2pzGeSiGqbWumV4WNvc9Rhp6tiCtm4oHnyPBSEtMGZwrQgudFQ+otqzWoPB7x+hxoWsw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@9.6.1:
@@ -2586,7 +2587,7 @@ snapshots:
       '@types/node': 20.5.1
       chalk: 4.1.2
       cosmiconfig: 8.3.6(typescript@5.6.3)
-      cosmiconfig-typescript-loader: 4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@5.6.3))(ts-node@10.9.2(@types/node@20.4.5)(typescript@5.0.2))(typescript@5.6.3)
+      cosmiconfig-typescript-loader: 4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@5.6.3))(ts-node@10.9.2(@types/node@20.5.1)(typescript@5.6.3))(typescript@5.6.3)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -3282,7 +3283,7 @@ snapshots:
 
   commander@9.5.0: {}
 
-  commitizen@4.3.0(@types/node@20.4.5)(typescript@5.0.2):
+  commitizen@4.3.1(@types/node@20.4.5)(typescript@5.0.2):
     dependencies:
       cachedir: 2.3.0
       cz-conventional-changelog: 3.3.0(@types/node@20.4.5)(typescript@5.0.2)
@@ -3330,7 +3331,7 @@ snapshots:
       meow: 8.1.2
       split2: 3.2.2
 
-  cosmiconfig-typescript-loader@4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@5.6.3))(ts-node@10.9.2(@types/node@20.4.5)(typescript@5.0.2))(typescript@5.6.3):
+  cosmiconfig-typescript-loader@4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@5.6.3))(ts-node@10.9.2(@types/node@20.5.1)(typescript@5.6.3))(typescript@5.6.3):
     dependencies:
       '@types/node': 20.5.1
       cosmiconfig: 8.3.6(typescript@5.6.3)
@@ -3379,7 +3380,7 @@ snapshots:
   cz-conventional-changelog@3.3.0(@types/node@20.4.5)(typescript@5.0.2):
     dependencies:
       chalk: 2.4.2
-      commitizen: 4.3.0(@types/node@20.4.5)(typescript@5.0.2)
+      commitizen: 4.3.1(@types/node@20.4.5)(typescript@5.0.2)
       conventional-commit-types: 3.0.0
       lodash.map: 4.6.0
       longest: 2.0.1
