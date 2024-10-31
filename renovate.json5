@@ -1,20 +1,45 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "labels": ["dependencies"],
-  "assignAutomerge": true,
-  "assignees": ["Kythuen"],
-  "dependencyDashboard": true,
-  "prHourlyLimit": 0,
-  "automerge": true,
-  "timezone": "UTC+8",
-  "automergeSchedule":  ["30 11 * * *"],
-  "separateMinorPatch": true,
-  "packageRules": [
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: ['config:base', 'group:allNonMajor'],
+  labels: ['dependencies'],
+  rangeStrategy: 'bump',
+  schedule":  ["before 12am"],
+  packageRules: [
     {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true,
-      "automergeSchedule":  ["30 11 * * *"],
+      depTypeList: ['peerDependencies'],
+      enabled: false
+    },
+    {
+      groupName: 'test',
+      matchPackageNames: ['vitest', 'jsdom'],
+      matchPackagePrefixes: ['@vitest']
+    },
+    {
+      groupName: 'build',
+      matchPackageNames: ['vite', 'vue-tsc'],
+      matchPackagePrefixes: ['rollup', 'esbuild', '@rollup', '@vitejs']
+    },
+    {
+      groupName: 'lint',
+      matchPackageNames: [
+        'husky',
+        'lint-staged',
+        'commitizen',
+        'cz-conventional-changelog'
+      ],
+      matchPackagePrefixes: [
+        '@commitlint',
+        '@typescript-eslint',
+        'typescript-eslint',
+        'eslint',
+        'prettier'
+      ]
     }
   ],
-  "ignoreTests": true
+  ignoreDeps: [
+    'vue',
+    // manually bumping
+    'node',
+    'typescript'
+  ]
 }
