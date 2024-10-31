@@ -1,45 +1,43 @@
 {
-  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  extends: ['config:base', 'group:allNonMajor', ':prHourlyLimitNone'],
-  labels: ['dependencies'],
-  rangeStrategy: 'bump',
-  schedule: ['before 12am'],
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: ["config:recommended", "group:allNonMajor", ":prHourlyLimitNone"],
+  labels: ["dependencies"],
+  rangeStrategy: "bump",
+  schedule: ["before 12am"],
   packageRules: [
     {
-      depTypeList: ['peerDependencies'],
-      enabled: false
+      matchDepTypes: ["peerDependencies"],
+      enabled: false,
     },
     {
-      groupName: 'test',
-      matchPackageNames: ['vitest', 'jsdom'],
-      matchPackagePrefixes: ['@vitest']
+      groupName: "test",
+      matchPackageNames: ["vitest", "jsdom", "@vitest{/,}**"],
     },
     {
-      groupName: 'build',
-      matchPackageNames: ['vite', 'vue-tsc'],
-      matchPackagePrefixes: ['rollup', 'esbuild', '@rollup', '@vitejs']
-    },
-    {
-      groupName: 'lint',
+      groupName: "build",
       matchPackageNames: [
-        'husky',
-        'lint-staged',
-        'commitizen',
-        'cz-conventional-changelog'
+        "vite",
+        "vue-tsc",
+        "rollup{/,}**",
+        "esbuild{/,}**",
+        "@rollup{/,}**",
+        "@vitejs{/,}**",
       ],
-      matchPackagePrefixes: [
-        '@commitlint',
-        '@typescript-eslint',
-        'typescript-eslint',
-        'eslint',
-        'prettier'
-      ]
-    }
+    },
+    {
+      groupName: "lint",
+      matchPackageNames: [
+        "husky",
+        "lint-staged",
+        "commitizen",
+        "cz-conventional-changelog",
+        "@commitlint{/,}**",
+        "@typescript-eslint{/,}**",
+        "typescript-eslint{/,}**",
+        "eslint{/,}**",
+        "prettier{/,}**",
+      ],
+    },
   ],
-  ignoreDeps: [
-    'vue',
-    // manually bumping
-    'node',
-    'typescript'
-  ]
+  ignoreDeps: ["vue", "node", "typescript"],
 }
