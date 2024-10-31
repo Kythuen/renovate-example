@@ -1,7 +1,16 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "labels": ["dependencies"],
+  "assignAutomerge": true,
+  "assignees": ["Kythuen"],
   "dependencyDashboard": true,
   "automerge": true,
-  "automergeSchedule":  ["before 10am"]
+  "automergeSchedule":  ["40 9 * * *"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ],
+  "ignoreTests": true
 }
