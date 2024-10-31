@@ -18,7 +18,7 @@
       matchPackagePrefixes: ['rollup', 'esbuild', '@rollup', '@vitejs']
     },
     {
-      groupName: 'type',
+      groupName: 'types',
       matchPackageNames: ['typescript', '@types/node', 'vue-tsc']
     },
     {
