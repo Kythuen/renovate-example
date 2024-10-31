@@ -16,7 +16,6 @@
       groupName: 'build',
       matchPackageNames: [
         'vite',
-        'vue-tsc',
         'rollup{/,}**',
         'esbuild{/,}**',
         '@rollup{/,}**',
