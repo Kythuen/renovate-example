@@ -9,11 +9,11 @@
       enabled: false
     },
     {
-      groupName: 'test',
+      groupName: 'test dependencies',
       matchPackageNames: ['vitest', 'jsdom', '@vitest{/,}**']
     },
     {
-      groupName: 'build',
+      groupName: 'build dependencies',
       matchPackageNames: [
         'vite',
         'rollup{/,}**',
@@ -23,7 +23,7 @@
       ]
     },
     {
-      groupName: 'lint',
+      groupName: 'lint dependencies',
       matchPackageNames: [
         'husky',
         'lint-staged',
