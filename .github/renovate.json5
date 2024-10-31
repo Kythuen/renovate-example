@@ -18,10 +18,6 @@
       matchPackagePrefixes: ['rollup', 'esbuild', '@rollup', '@vitejs']
     },
     {
-      groupName: 'types',
-      matchPackageNames: ['typescript', '@types/node', 'vue-tsc']
-    },
-    {
       groupName: 'lint',
       matchPackageNames: [
         'vite',
@@ -47,5 +43,5 @@
       ]
     }
   ],
-  ignoreDeps: []
+  ignoreDeps: ['typescript', '@types/node', 'vue-tsc']
 }
