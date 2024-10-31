@@ -5,7 +5,7 @@
   "assignees": ["Kythuen"],
   "dependencyDashboard": true,
   "automerge": true,
-  "automergeSchedule":  ["40 9 * * *"],
+  "automergeSchedule":  ["* 10 * * *"],
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
