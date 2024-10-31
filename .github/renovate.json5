@@ -1,9 +1,8 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  extends: ['config:base', 'group:allNonMajor', ':prHourlyLimitNone'],
+  extends: ['config:base', 'schedule:weekly', 'group:allNonMajor'],
   labels: ['dependencies'],
   rangeStrategy: 'bump',
-  schedule: ['before 12am'],
   packageRules: [
     {
       depTypeList: ['peerDependencies'],
@@ -17,6 +16,11 @@
     {
       groupName: 'build',
       matchPackageNames: ['vite', 'vue-tsc'],
+      matchPackagePrefixes: ['rollup', 'esbuild', '@rollup', '@vitejs']
+    },
+    {
+      groupName: 'type',
+      matchPackageNames: ['typescript', '@types/node', 'vue-tsc'],
       matchPackagePrefixes: ['rollup', 'esbuild', '@rollup', '@vitejs']
     },
     {
@@ -36,10 +40,5 @@
       ]
     }
   ],
-  ignoreDeps: [
-    'vue',
-    // manually bumping
-    'node',
-    'typescript'
-  ]
+  ignoreDeps: []
 }
