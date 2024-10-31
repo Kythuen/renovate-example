@@ -7,11 +7,13 @@
   "prHourlyLimit": 0,
   "automerge": true,
   "timezone": "UTC+8",
-  "automergeSchedule":  ["* 11 * * *"],
+  "automergeSchedule":  ["20 11 * * *"],
+  "separateMinorPatch": true,
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true
+      "automerge": true,
+      "automergeSchedule":  ["20 11 * * *"],
     }
   ],
   "ignoreTests": true
