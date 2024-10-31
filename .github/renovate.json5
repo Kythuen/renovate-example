@@ -5,13 +5,12 @@
   rangeStrategy: 'bump',
   packageRules: [
     {
-      depTypeList: ['peerDependencies'],
+      matchDepTypes: ['peerDependencies'],
       enabled: false
     },
     {
       groupName: 'test',
-      matchPackageNames: ['vitest', 'jsdom'],
-      matchPackagePrefixes: ['@vitest']
+      matchPackageNames: ['vitest', 'jsdom', '@vitest{/,}**']
     },
     {
       groupName: 'build',
@@ -26,17 +25,26 @@
     {
       groupName: 'lint',
       matchPackageNames: [
+        'vite',
+        'vue-tsc',
+        'rollup{/,}**',
+        'esbuild{/,}**',
+        '@rollup{/,}**',
+        '@vitejs{/,}**'
+      ]
+    },
+    {
+      groupName: 'lint',
+      matchPackageNames: [
         'husky',
         'lint-staged',
         'commitizen',
-        'cz-conventional-changelog'
-      ],
-      matchPackagePrefixes: [
-        '@commitlint',
-        '@typescript-eslint',
-        'typescript-eslint',
-        'eslint',
-        'prettier'
+        'cz-conventional-changelog',
+        '@commitlint{/,}**',
+        '@typescript-eslint{/,}**',
+        'typescript-eslint{/,}**',
+        'eslint{/,}**',
+        'prettier{/,}**'
       ]
     }
   ],
