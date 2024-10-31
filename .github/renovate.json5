@@ -3,7 +3,7 @@
   extends: ['config:base', 'group:allNonMajor', 'prHourlyLimitNone'],
   labels: ['dependencies'],
   rangeStrategy: 'bump',
-  schedule":  ["before 12am"],
+  schedule":  ['before 12am'],
   packageRules: [
     {
       depTypeList: ['peerDependencies'],
