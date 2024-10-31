@@ -1,47 +1,53 @@
 {
-  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  extends: ['config:base', 'schedule:weekly', 'group:allNonMajor'],
-  labels: ['dependencies'],
-  rangeStrategy: 'bump',
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: ["config:recommended", "schedule:weekly", "group:allNonMajor"],
+  labels: ["dependencies"],
+  rangeStrategy: "bump",
   packageRules: [
     {
-      matchDepTypes: ['peerDependencies'],
-      enabled: false
+      matchDepTypes: ["peerDependencies"],
+      enabled: false,
     },
     {
-      groupName: 'test',
-      matchPackageNames: ['vitest', 'jsdom', '@vitest{/,}**']
+      groupName: "test",
+      matchPackageNames: ["vitest", "jsdom", "@vitest{/,}**"],
     },
     {
-      groupName: 'build',
-      matchPackageNames: ['vite', 'vue-tsc'],
-      matchPackagePrefixes: ['rollup', 'esbuild', '@rollup', '@vitejs']
-    },
-    {
-      groupName: 'lint',
+      groupName: "build",
       matchPackageNames: [
-        'vite',
-        'vue-tsc',
-        'rollup{/,}**',
-        'esbuild{/,}**',
-        '@rollup{/,}**',
-        '@vitejs{/,}**'
-      ]
+        "vite",
+        "vue-tsc",
+        "rollup{/,}**",
+        "esbuild{/,}**",
+        "@rollup{/,}**",
+        "@vitejs{/,}**",
+      ],
     },
     {
-      groupName: 'lint',
+      groupName: "lint",
       matchPackageNames: [
-        'husky',
-        'lint-staged',
-        'commitizen',
-        'cz-conventional-changelog',
-        '@commitlint{/,}**',
-        '@typescript-eslint{/,}**',
-        'typescript-eslint{/,}**',
-        'eslint{/,}**',
-        'prettier{/,}**'
-      ]
-    }
+        "vite",
+        "vue-tsc",
+        "rollup{/,}**",
+        "esbuild{/,}**",
+        "@rollup{/,}**",
+        "@vitejs{/,}**",
+      ],
+    },
+    {
+      groupName: "lint",
+      matchPackageNames: [
+        "husky",
+        "lint-staged",
+        "commitizen",
+        "cz-conventional-changelog",
+        "@commitlint{/,}**",
+        "@typescript-eslint{/,}**",
+        "typescript-eslint{/,}**",
+        "eslint{/,}**",
+        "prettier{/,}**",
+      ],
+    },
   ],
-  ignoreDeps: ['typescript', '@types/node', 'vue-tsc']
+  ignoreDeps: ["typescript", "@types/node", "vue-tsc"],
 }
