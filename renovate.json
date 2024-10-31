@@ -4,8 +4,10 @@
   "assignAutomerge": true,
   "assignees": ["Kythuen"],
   "dependencyDashboard": true,
+  "prHourlyLimit": 0,
   "automerge": true,
-  "automergeSchedule":  ["* 10 * * *"],
+  "timezone": "+8:00",
+  "automergeSchedule":  ["* 11 * * *"],
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
