@@ -19,8 +19,7 @@
     },
     {
       groupName: 'type',
-      matchPackageNames: ['typescript', '@types/node', 'vue-tsc'],
-      matchPackagePrefixes: ['rollup', 'esbuild', '@rollup', '@vitejs']
+      matchPackageNames: ['typescript', '@types/node', 'vue-tsc']
     },
     {
       groupName: 'lint',
