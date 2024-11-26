@@ -20,7 +20,7 @@
     "@types/node": "20.17.3",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.7.5",
-    "@vitejs/plugin-vue": "^5.1.4",
+    "@vitejs/plugin-vue": "^5.2.1",
     "commitizen": "4.3.1",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "8.35.0",
@@ -34,7 +34,7 @@
     "prettier": "2.8.8",
     "sponsorkit": "^0.15.5",
     "typescript": "~5.0.2",
-    "vite": "^5.4.10",
+    "vite": "^5.4.11",
     "vue-tsc": "^2.1.6"
   }
 }
